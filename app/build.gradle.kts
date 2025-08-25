@@ -65,6 +65,7 @@ dependencies {
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2")
 
     // Retrofit + Okhttp
     implementation(libs.retrofit2.converter.gson)
@@ -75,6 +76,8 @@ dependencies {
 
     // Dagger Hilt
     implementation(libs.hilt.android)
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
     kapt(libs.hilt.compiler)
 
     // Unit test
