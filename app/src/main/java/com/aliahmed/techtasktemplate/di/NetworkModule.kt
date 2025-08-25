@@ -40,7 +40,7 @@ class NetworkModule {
         gson: Gson
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("BASE_URL") // TODO Replace the base URL
+            .baseUrl("https://dd28b8de-0a7e-4a8d-b5d4-8f25f5a35069.mock.pstmn.io/accounts/ACT123456/") // TODO Replace the base URL
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()

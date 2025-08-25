@@ -9,9 +9,15 @@ suspend fun <T : Any> handleApi(
     return try {
         val response = execute()
         if (response.isSuccessful) {
-            NetworkResult.Success(response.code(), response.body())
+            val body = response.body()
+            if (body != null) {
+                NetworkResult.Success(response.code(), body)
+            } else {
+                NetworkResult.Error(response.code(), "Response body is null")
+            }
         } else {
-            NetworkResult.Error(response.code(), response.errorBody()?.string())
+            val errMsg = response.errorBody()?.string()
+            NetworkResult.Error(response.code(), errMsg ?: response.message())
         }
     } catch (e: HttpException) {
         NetworkResult.Error(e.code(), e.message())
