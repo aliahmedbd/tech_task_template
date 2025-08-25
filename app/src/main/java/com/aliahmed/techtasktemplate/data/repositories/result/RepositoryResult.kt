@@ -1,4 +1,4 @@
-package com.aliahmed.techtasktemplate.data.model
+package com.aliahmed.techtasktemplate.data.repositories.result
 
 sealed class RepositoryResult<out T> {
     data class Success<T>(val response: T) : RepositoryResult<T>()

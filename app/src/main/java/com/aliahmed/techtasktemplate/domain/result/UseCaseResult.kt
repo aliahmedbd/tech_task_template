@@ -1,4 +1,4 @@
-package com.aliahmed.techtasktemplate.domain.model
+package com.aliahmed.techtasktemplate.domain.result
 
 sealed class UseCaseResult<out T> {
     data class Success<T>(val data: T) : UseCaseResult<T>()

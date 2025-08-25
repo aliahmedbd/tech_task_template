@@ -1,4 +1,4 @@
-package com.aliahmed.techtasktemplate.data.network.model
+package com.aliahmed.techtasktemplate.data.network.result
 
 sealed class NetworkResult<out T> {
     data class Success<out T>(val code: Int, val response: T) : NetworkResult<T>()

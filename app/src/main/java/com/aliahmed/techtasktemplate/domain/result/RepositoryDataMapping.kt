@@ -1,6 +1,6 @@
-package com.aliahmed.techtasktemplate.domain.model
+package com.aliahmed.techtasktemplate.domain.result
 
-import com.aliahmed.techtasktemplate.data.model.RepositoryResult
+import com.aliahmed.techtasktemplate.data.repositories.result.RepositoryResult
 
 fun <T> RepositoryResult<T>.toUseCaseResult(): UseCaseResult<T> = when (this) {
     is RepositoryResult.Success -> UseCaseResult.Success(response)

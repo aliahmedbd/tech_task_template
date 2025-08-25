@@ -1,4 +1,4 @@
-package com.aliahmed.techtasktemplate.data.network.model
+package com.aliahmed.techtasktemplate.data.network.result
 
 import retrofit2.HttpException
 import retrofit2.Response

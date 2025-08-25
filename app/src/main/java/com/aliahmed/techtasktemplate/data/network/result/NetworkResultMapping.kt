@@ -1,6 +1,6 @@
-package com.aliahmed.techtasktemplate.data.network.model
+package com.aliahmed.techtasktemplate.data.network.result
 
-import com.aliahmed.techtasktemplate.data.model.RepositoryResult
+import com.aliahmed.techtasktemplate.data.repositories.result.RepositoryResult
 
 fun<T,R> NetworkResult<T>.toRepositoryResult(mapper: (T) -> R) : RepositoryResult<R> = when(this) {
     is NetworkResult.Success -> RepositoryResult.Success(mapper(this.response))
